@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Ken",
+        "skils": [
+            { "lang": "html", "level": "8" },
+            { "lang": "css", "level": "7" },
+            { "lang": "javascript", "level": "6" },
+            { "lang": "react", "level": "6" },
+            { "lang": "git", "level": "4" },
+            { "lang": "C", "level": "6" }
+        ]
+    },
+    {
+        "name": "John",
+        "skils": [
+            { "lang": "python", "level": "9" },
+            { "lang": "c#", "level": "10" }
+        ]
+    },
+    {
+        "name": "Reina",
+        "skils": [
+            { "lang": "Swift", "level": "10" },
+            { "lang": "Go", "level": "10" },
+            { "lang": "C#", "level": "10" }
+        ]
+    }
+]

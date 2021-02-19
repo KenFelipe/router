@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
@@ -14,8 +14,21 @@ import Contact from './contents/Contact'
 
 
 const App = props => {
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(response => response.text())
+            .then(jsonText => JSON.parse(jsonText))
+            .then(data => {
+                console.log(data)
+            })
+
+        console.log("in App")
+    }, [])
+
     return (
         <Wrapper>
+            <a href="#contact" target="_blank">Contact</a>
             {/* share */}
             <Header></Header>
 
