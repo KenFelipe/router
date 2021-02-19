@@ -1,10 +1,10 @@
 import React from 'react'
 
+import Header from './share/header'
+
 const App = props => {
     return (
-        <div>
-            App
-        </div>
+        <Header></Header>
     )
 }
 
