@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 // share
 import Header from './share/header'
@@ -18,16 +19,15 @@ const App = props => {
             {/* share */}
             <Header></Header>
 
-            <Router>
-                <div>
-                    <NavBar />
-
-                    {/* <Route exact path='/' component={Home} /> */}
+            <Router hashType="noslash">
+                <NavBar />
+                <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route exact path='/about' component={About} />
-                    <Route exact path='/contact' component={Contact} />
-                    {/* <Route path='/*' component={About} /> */}
-                </div>
+                    <Route path='/about' component={About} />
+                    <Route path='/contact' component={Contact} />
+
+                    <Route path='/' component={Home} />
+                </Switch>
             </Router>
         </Wrapper>
     )
